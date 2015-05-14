@@ -1,0 +1,44 @@
+############################################
+##										  ##
+## JenSoft API SAMPLES : Release Notes    ##
+##										  ##
+############################################
+
+
+	group    : com.jensoft
+	artifact : jensoft-samples-catalog
+	version  : 2.0.3
+	
+#######################################
+## Notes 2.0.3  - April 19, 2015  ##
+#######################################
+
+- Refactoring for metrics plugin
+
+
+#######################################
+## Notes 2.0.1  - December 27, 2014  ##
+#######################################
+
+- Remove most of reference from input physical font that sometimes crash JVM
+
+
+#######################################
+## Notes 2.0.0  - December 27, 2014  ##
+#######################################
+
+-Global Refactoring according to core 2.0.0
+
+-Add DataLegend samples
+
+########################################
+## Notes 1.0.1  -  February 9, 2014 ##
+########################################
+
+link core 1.0.1
+
+########################################
+## Notes 1.0.0  -  January 25, 2014   ##
+########################################
+
+JenSoft API Samples classes first version
