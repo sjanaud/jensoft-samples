@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.jensoft.core.catalog.nature.JenSoftView;
+import org.jensoft.core.catalog.ui.ViewFrameUI;
 import org.jensoft.core.glyphmetrics.GlyphMetric;
 import org.jensoft.core.glyphmetrics.GlyphMetricsNature;
 import org.jensoft.core.glyphmetrics.StylePosition;
@@ -51,10 +52,13 @@ import org.jensoft.core.view.background.ViewDarkBackground;
  * 
  * @author Sébastien Janaud
  */
-@JenSoftView(background=ViewDarkBackground.class,description="Show how to use capture plugin to create view image by plugin")
-public class Capture extends View
-{
+@JenSoftView(background = ViewDarkBackground.class, description = "Show how to use capture plugin to create view image by plugin")
+public class Capture extends View {
 
+	public static void main(String[] args) {
+		ViewFrameUI ui = new ViewFrameUI(new Capture());
+	}
+	
 	/**
 	 * create capture demo
 	 */
@@ -75,20 +79,19 @@ public class Capture extends View
 		// create modeled axis plug-in in south part
 		AxisMetricsPlugin.ModeledMetrics southMetrics = new AxisMetricsPlugin.ModeledMetrics.S();
 		proj.registerPlugin(southMetrics);
-		
 
 		// create modeled axis plug-in in west part
 		AxisMetricsPlugin.ModeledMetrics westMetrics = new AxisMetricsPlugin.ModeledMetrics.W();
 		proj.registerPlugin(westMetrics);
-		
 
 		// outline plug-in
 		proj.registerPlugin(new OutlinePlugin());
-		Font f =  new Font("Dialog", Font.PLAIN, 12);
+		Font f = new Font("Dialog", Font.PLAIN, 12);
 		// legend plug-in
 		TitleLegend legend = new TitleLegend("capture");
 		legend.setFont(f);
-		legend.setConstraints(new TitleLegendConstraints(LegendPosition.South, 0.8f, LegendAlignment.Rigth));
+		legend.setConstraints(new TitleLegendConstraints(LegendPosition.South,
+				0.8f, LegendAlignment.Rigth));
 		TitleLegendPlugin legendPlugin = new TitleLegendPlugin(legend);
 		proj.registerPlugin(legendPlugin);
 
@@ -114,24 +117,29 @@ public class Capture extends View
 		bp.addPaint(new StripePaint(new Color(255, 255, 255, 40)));
 		bp.addPaint(new StripePaint(new Color(40, 40, 40, 40)));
 
-		StripePaint pGradient = new StripePaint(Shader.Night.getFractions(), Shader.Night.getColors());
+		StripePaint pGradient = new StripePaint(Shader.Night.getFractions(),
+				Shader.Night.getColors());
 		stripePlugin.setStripePalette(bp);
 		stripePlugin.setAlpha(0.3f);
 		proj.registerPlugin(stripePlugin);
 
 		// grid plug-in
-		GridPlugin grids = new GridPlugin.MultiplierGrid(0, 1000, GridOrientation.Horizontal);
+		GridPlugin grids = new GridPlugin.MultiplierGrid(0, 1000,
+				GridOrientation.Horizontal);
 		grids.setGridColor(new Color(59, 89, 152, 100));
 		proj.registerPlugin(grids);
 
-		GridPlugin grids2 = new GridPlugin.MultiplierGrid(0, 1000, GridOrientation.Vertical);
+		GridPlugin grids2 = new GridPlugin.MultiplierGrid(0, 1000,
+				GridOrientation.Vertical);
 		grids2.setGridColor(new Color(59, 89, 152, 100));
 		proj.registerPlugin(grids2);
 
 		// source function
 		List<Point2D> sourceFunction = new ArrayList<Point2D>();
-		double[] xValues0 = { -3000, -2500, -2000, -1500, -1000, -500, 500, 1000, 1500, 2000, 2500, 3000 };
-		double[] yValues0 = { 1456, -897, 678, -967, 700, -1000, +800, -799, 1200, -3000, 1190, -1790 };
+		double[] xValues0 = { -3000, -2500, -2000, -1500, -1000, -500, 500,
+				1000, 1500, 2000, 2500, 3000 };
+		double[] yValues0 = { 1456, -897, 678, -967, 700, -1000, +800, -799,
+				1200, -3000, 1190, -1790 };
 		for (int i = 0; i < xValues0.length; i++) {
 			sourceFunction.add(new Point2D.Double(xValues0[i], yValues0[i]));
 		}
@@ -179,7 +187,8 @@ public class Capture extends View
 		metric.setFont(f);
 		metricsPath.addMetrics(metric);
 
-		MetricsPathPlugin curveMetricsPathLayout = new MetricsPathPlugin(metricsPath);
+		MetricsPathPlugin curveMetricsPathLayout = new MetricsPathPlugin(
+				metricsPath);
 		proj.registerPlugin(curveMetricsPathLayout);
 
 		// capture plug-in
