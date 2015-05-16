@@ -19,7 +19,7 @@ import org.jensoft.core.view.View;
 import org.jensoft.core.view.background.ViewDarkBackground;
 
 /**
- * <code>Capacity1</code>
+ * <code>CapacityDemo</code>
  * 
  * @author Sébastien Janaud
  */
@@ -28,8 +28,6 @@ public class CapacityDemo extends View {
 
 	private static final long serialVersionUID = 8159753314041939307L;
 
-	
-	
 	public CapacityDemo() {
 		super(60);
 
@@ -41,7 +39,7 @@ public class CapacityDemo extends View {
 		proj.registerPlugin(new OutlinePlugin(Color.WHITE));
 
 		// 864 capacity cell
-		capacity = new CapacityPlugin(48, 18);
+		CapacityPlugin capacity = new CapacityPlugin(48, 18);
 		proj.registerPlugin(capacity);
 
 		CapacityUnit unit1 = new CapacityUnit(93);
@@ -76,25 +74,10 @@ public class CapacityDemo extends View {
 		capacity.registerCapacity(unit8);
 		unit8.setColor(PetalPalette.PETAL8_HC);
 
-		Thread tdemo = new Thread(capaDemo, "TH-CapacityDemo");
-		tdemo.start();
-
 	}
 
 	public static void main(String[] args) {
 		ViewFrameUI ui = new ViewFrameUI(new CapacityDemo());
 	}
-
-	CapacityPlugin capacity;
-	Runnable capaDemo = new Runnable() {
-
-		@Override
-		public void run() {
-
-			// anim cell
-
-			repaintDevice();
-		}
-	};
 
 }
