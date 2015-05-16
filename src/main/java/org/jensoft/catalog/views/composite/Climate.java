@@ -13,6 +13,7 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 
 import org.jensoft.core.catalog.nature.JenSoftView;
+import org.jensoft.core.catalog.ui.ViewFrameUI;
 import org.jensoft.core.graphics.Shader;
 import org.jensoft.core.palette.color.Alpha;
 import org.jensoft.core.palette.color.ColorPalette;
@@ -70,13 +71,19 @@ import org.jensoft.core.view.background.ViewDarkBackground;
 import org.jensoft.core.view.background.ViewDefaultBackground;
 
 /**
- * <code>ClimateDemo</code>
+ * <code>Climate</code>
  * 
  * @author Sébastien Janaud
  */
 @JenSoftView(background=ViewDarkBackground.class,description="Show how to create composite view using different kind of plugin.")
 public class Climate extends View {
 
+	private static final long serialVersionUID = 7125717847427227749L;
+
+	public static void main(String[] args) {
+		ViewFrameUI ui = new ViewFrameUI(new Climate());
+	}
+	
 	/**
 	 * create a demo for climate type chart
 	 */
@@ -101,7 +108,7 @@ public class Climate extends View {
 		projRainfall.setThemeColor(RosePalette.MELON);
 		projRainfall.registerPlugin(new OutlinePlugin());
 
-		AxisMetricsPlugin.ModeledMetrics rainMetrics = new AxisMetricsPlugin.ModeledMetrics.W();
+		AxisMetricsPlugin.ModeledMetrics rainMetrics = new AxisMetricsPlugin.ModeledMetrics.E();
 		rainMetrics.setTextFont(f12);
 		
 		rainMetrics.setTextColor(blue);
@@ -128,24 +135,15 @@ public class Climate extends View {
 		// create axis label
 		for (int i = 0; i < rainfalls.length; i++) {
 			BarDefaultAxisLabel rl = new BarDefaultAxisLabel("Jan", Color.WHITE);
-			// BarSymbolRelativeLabel rl = new BarSymbolRelativeLabel(
-			// VerticalAlignment.SouthTop, HorizontalAlignment.Middle,
-			// Color.WHITE, new Alpha(TangoPalette.SKYBLUE3, 80),
-			// Color.BLACK);
 			rl.setFont(f12);
 			rl.setTextColor(ColorPalette.WHITE);
 			rl.setText(rainfalls[i].getSymbol().substring(0, 3));
 			rl.setTextPaddingY(1);
 			rl.setOffsetY(10);
-			// rainfalls[i].setBarLabel(rl);
 			rainfalls[i].setAxisLabel(rl);
 		}
 
-		// or use bar factory
-		// BarFactory.createGroup(nameSymbol, base, thickness);
-		// BarFactory.createGroup(nameSymbol, base, thickness, round)
-		// BarFactory.createGroup(nameSymbol, base, thickness, barDraw, barFill,
-		// barEffect);
+		
 
 		// create a group for properties
 		BarSymbolGroup group1 = new BarSymbolGroup("G1");
@@ -235,7 +233,7 @@ public class Climate extends View {
 		/**
 		 * polyline does not contribute itself to layer constraints solving for
 		 * location, it only solve by its points elements coordinates which have
-		 * to solved in the same layer.�
+		 * to solved in the same layer.
 		 */
 
 		PolylinePointSymbol polylineSymbol = new PolylinePointSymbol("sunshine polyline");
@@ -270,12 +268,12 @@ public class Climate extends View {
 		TitleLegend rainfalllegend = new TitleLegend("Rainfall");
 		rainfalllegend.setLegendFill(new TitleLegendGradientFill(Color.WHITE, blue));
 		rainfalllegend.setFont(f14);
-		rainfalllegend.setConstraints(new TitleLegendConstraints(LegendPosition.East, 0.5f, LegendAlignment.Middle));
+		rainfalllegend.setConstraints(new TitleLegendConstraints(LegendPosition.East, 0.8f, LegendAlignment.Middle));
 
 		TitleLegend sunshinelegend = new TitleLegend("Temperature");
 		sunshinelegend.setLegendFill(new TitleLegendGradientFill(Color.WHITE, orange));
 		sunshinelegend.setFont(f14);
-		sunshinelegend.setConstraints(new TitleLegendConstraints(LegendPosition.West, 0.5f, LegendAlignment.Middle));
+		sunshinelegend.setConstraints(new TitleLegendConstraints(LegendPosition.West, 0.8f, LegendAlignment.Middle));
 
 		TitleLegendPlugin legendPlugin = new TitleLegendPlugin();
 		legendPlugin.addLegend(legend);

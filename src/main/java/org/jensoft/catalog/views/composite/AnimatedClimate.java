@@ -13,6 +13,7 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 
 import org.jensoft.core.catalog.nature.JenSoftView;
+import org.jensoft.core.catalog.ui.ViewFrameUI;
 import org.jensoft.core.palette.color.Alpha;
 import org.jensoft.core.palette.color.ColorPalette;
 import org.jensoft.core.palette.color.FilPalette;
@@ -65,13 +66,20 @@ import org.jensoft.core.view.ViewPart;
 import org.jensoft.core.view.background.ViewDarkBackground;
 
 /**
- * <code>AnimatedClimateDemo</code>
+ * <code>AnimatedClimate</code>
  * 
  * @author Sébastien Janaud
  */
 @JenSoftView(background=ViewDarkBackground.class,description="Show how to animate and create composite view using different kind of plugin")
 public class AnimatedClimate extends View {
 
+	
+	private static final long serialVersionUID = 3407773311940856597L;
+
+	public static void main(String[] args) {
+		ViewFrameUI ui = new ViewFrameUI(new AnimatedClimate());
+	}
+	
 	/**
 	 * create animated climate demo
 	 */
@@ -241,13 +249,9 @@ public class AnimatedClimate extends View {
 
 				for (int i = 0; i < rainfalls.length; i++) {
 					// add symbol
-					// double value = rainfalls[i].getValue();
 					rainfalls[i].setAscentValue(0);// reset to base for inflate
 													// animation
 					group1.addSymbol(rainfalls[i]);
-					// rainfalls[i].inflate(value, 10, 50, 20);
-					// Thread.sleep(500);
-					// climateView.repaintView();
 					// add strut after symbol exclude last symbol
 					if (i < 11) {
 						group1.addSymbol(SymbolComponent.createStrut(BarSymbol.class, 20));
@@ -274,7 +278,6 @@ public class AnimatedClimate extends View {
 					al1.setText(rainfalls[i].getSymbol().substring(0, 3));
 					rainfalls[i].setAxisLabel(al1);
 
-					// tempo
 					Thread.sleep(100);
 					climateView.repaintPart(ViewPart.South);
 				}
@@ -345,12 +348,10 @@ public class AnimatedClimate extends View {
 				for (int i = 0; i < sunshines.length; i++) {
 					sunshines[i].setVisible(true);
 
-					// tempo
 					climateView.repaintDevice();
 					Thread.sleep(80);
 				}
 
-				// tempo
 				climateView.repaintDevice();
 				Thread.sleep(300);
 
@@ -419,7 +420,6 @@ public class AnimatedClimate extends View {
 				Thread.sleep(200);
 
 			} catch (InterruptedException e) {
-
 				e.printStackTrace();
 			}
 		}
