@@ -11,6 +11,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 import org.jensoft.core.catalog.nature.JenSoftView;
+import org.jensoft.core.catalog.ui.ViewFrameUI;
 import org.jensoft.core.graphics.Shader;
 import org.jensoft.core.palette.TexturePalette;
 import org.jensoft.core.palette.color.ColorPalette;
@@ -55,6 +56,12 @@ import org.jensoft.core.view.background.ViewDefaultBackground;
 @JenSoftView(background=ViewDarkBackground.class)
 public class VerticalBarAxisLabelDemo extends View {
 
+	
+	public static void main(String[] args) {
+		ViewFrameUI ui = new ViewFrameUI(new VerticalBarAxisLabelDemo());
+		
+	}
+	
 	@Portfolio(name = "VerticalBarAxisLabelDemo", width = 600, height = 400)
 	public static View getPortofolio() {
 		VerticalBarAxisLabelDemo demo = new VerticalBarAxisLabelDemo();

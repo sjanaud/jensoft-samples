@@ -5,7 +5,6 @@
  * See JenSoft Software License Agreement
  */
 package org.jensoft.catalog.views.function.curve;
-import org.jensoft.core.plugin.function.curve.Curve;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -21,6 +20,7 @@ import org.jensoft.core.palette.color.PetalPalette;
 import org.jensoft.core.palette.color.RosePalette;
 import org.jensoft.core.plugin.function.FunctionPlugin.CurveFunction;
 import org.jensoft.core.plugin.function.FunctionToolkit;
+import org.jensoft.core.plugin.function.curve.Curve;
 import org.jensoft.core.plugin.function.curve.painter.draw.CurveDefaultDraw;
 import org.jensoft.core.plugin.function.source.FunctionNature;
 import org.jensoft.core.plugin.function.source.MathSourceFunction;

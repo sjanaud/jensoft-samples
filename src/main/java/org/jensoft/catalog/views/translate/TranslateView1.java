@@ -22,11 +22,13 @@ import org.jensoft.core.plugin.function.curve.Curve;
 import org.jensoft.core.plugin.function.curve.painter.draw.CurveDefaultDraw;
 import org.jensoft.core.plugin.function.source.UserSourceFunction;
 import org.jensoft.core.plugin.grid.Grid.GridOrientation;
+import org.jensoft.core.plugin.grid.GridPlugin;
 import org.jensoft.core.plugin.grid.GridPlugin.MultiplierGrid;
 import org.jensoft.core.plugin.legend.title.TitleLegend;
 import org.jensoft.core.plugin.legend.title.TitleLegendPlugin;
 import org.jensoft.core.plugin.metrics.AxisMetricsPlugin;
 import org.jensoft.core.plugin.outline.OutlinePlugin;
+import org.jensoft.core.plugin.stripe.StripePlugin;
 import org.jensoft.core.plugin.stripe.StripePlugin.MultiplierStripe;
 import org.jensoft.core.plugin.stripe.painter.StripePalette;
 import org.jensoft.core.plugin.translate.TranslateCompassWidget;
@@ -37,8 +39,6 @@ import org.jensoft.core.plugin.translate.TranslateY;
 import org.jensoft.core.projection.Projection;
 import org.jensoft.core.view.View;
 import org.jensoft.core.view.background.ViewDarkBackground;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
 
 @JenSoftView(background=ViewDarkBackground.class,description="a translate (view 1) view which is use in translate synchronization demo, see SynchronizedTranslate Dashboard.",ignore=true)
 public class TranslateView1 extends View {

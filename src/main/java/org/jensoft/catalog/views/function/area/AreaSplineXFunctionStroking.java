@@ -5,9 +5,6 @@
  * See JenSoft Software License Agreement
  */
 package org.jensoft.catalog.views.function.area;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
-import org.jensoft.core.plugin.function.area.Area;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
@@ -27,7 +24,7 @@ import org.jensoft.core.palette.color.RosePalette;
 import org.jensoft.core.palette.color.TangoPalette;
 import org.jensoft.core.plugin.function.FunctionPlugin;
 import org.jensoft.core.plugin.function.FunctionPlugin.AreaFunction;
-import org.jensoft.core.plugin.function.FunctionPlugin;
+import org.jensoft.core.plugin.function.area.Area;
 import org.jensoft.core.plugin.function.area.painter.draw.AreaDefaultDraw;
 import org.jensoft.core.plugin.function.area.painter.fill.AreaGradientFill;
 import org.jensoft.core.plugin.function.source.UserSourceFunction;

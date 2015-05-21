@@ -5,7 +5,6 @@
  * See JenSoft Software License Agreement
  */
 package org.jensoft.catalog.views.function.curve;
-import org.jensoft.core.plugin.function.curve.Curve;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -23,9 +22,11 @@ import org.jensoft.core.plugin.background.DeviceGradientBackgroundPlugin;
 import org.jensoft.core.plugin.background.DeviceNightBackground;
 import org.jensoft.core.plugin.function.FunctionPlugin.CurveFunction;
 import org.jensoft.core.plugin.function.FunctionToolkit;
+import org.jensoft.core.plugin.function.curve.Curve;
 import org.jensoft.core.plugin.function.curve.painter.draw.CurveDefaultDraw;
 import org.jensoft.core.plugin.function.source.UserSourceFunction;
 import org.jensoft.core.plugin.grid.Grid.GridOrientation;
+import org.jensoft.core.plugin.grid.GridPlugin;
 import org.jensoft.core.plugin.grid.GridPlugin.MultiplierGrid;
 import org.jensoft.core.plugin.legend.title.TitleLegend;
 import org.jensoft.core.plugin.legend.title.TitleLegendConstraints;
@@ -34,6 +35,7 @@ import org.jensoft.core.plugin.legend.title.TitleLegendConstraints.LegendPositio
 import org.jensoft.core.plugin.legend.title.painter.fil.TitleLegendGradientFill;
 import org.jensoft.core.plugin.metrics.AxisMetricsPlugin;
 import org.jensoft.core.plugin.outline.OutlinePlugin;
+import org.jensoft.core.plugin.stripe.StripePlugin;
 import org.jensoft.core.plugin.stripe.StripePlugin.MultiplierStripe;
 import org.jensoft.core.plugin.stripe.painter.StripePalette;
 import org.jensoft.core.plugin.translate.TranslateDefaultDeviceContext;
@@ -48,8 +50,6 @@ import org.jensoft.core.plugin.zoom.wheel.ZoomWheelPlugin;
 import org.jensoft.core.projection.Projection;
 import org.jensoft.core.view.View;
 import org.jensoft.core.view.background.ViewDarkBackground;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
 /**
  * <code>CurveSplineXFunctionLabelSample</code>
  * 

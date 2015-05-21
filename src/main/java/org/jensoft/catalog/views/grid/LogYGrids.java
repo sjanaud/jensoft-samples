@@ -17,6 +17,7 @@ import org.jensoft.core.palette.color.JennyPalette;
 import org.jensoft.core.palette.color.PetalPalette;
 import org.jensoft.core.palette.color.RosePalette;
 import org.jensoft.core.plugin.grid.Grid.GridOrientation;
+import org.jensoft.core.plugin.grid.GridPlugin;
 import org.jensoft.core.plugin.grid.GridPlugin.FreeGrid;
 import org.jensoft.core.plugin.legend.title.TitleLegend;
 import org.jensoft.core.plugin.legend.title.TitleLegendConstraints;
@@ -35,8 +36,6 @@ import org.jensoft.core.view.Portfolio;
 import org.jensoft.core.view.View;
 import org.jensoft.core.view.background.ViewDarkBackground;
 import org.jensoft.core.view.background.ViewDefaultBackground;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
 /**
  * <code>LogYGridDemo</code>
  * 

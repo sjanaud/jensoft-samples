@@ -43,8 +43,6 @@ import org.jensoft.core.view.Portfolio;
 import org.jensoft.core.view.View;
 import org.jensoft.core.view.background.ViewDarkBackground;
 import org.jensoft.core.view.background.ViewDefaultBackground;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
 @JenSoftView(background=ViewDarkBackground.class,description="Show how to use functions with source tracker")
 public class FunctionSourceTrackerSample extends View {
 

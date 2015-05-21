@@ -37,12 +37,10 @@ import org.jensoft.core.plugin.zoom.lens.LensX;
 import org.jensoft.core.plugin.zoom.lens.LensY;
 import org.jensoft.core.plugin.zoom.lens.ZoomLensPlugin;
 import org.jensoft.core.plugin.zoom.wheel.ZoomWheelPlugin;
+import org.jensoft.core.projection.Projection;
 import org.jensoft.core.view.View;
 import org.jensoft.core.view.ViewPart;
 import org.jensoft.core.view.background.ViewDarkBackground;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
-import org.jensoft.core.projection.Projection;
 /**
  * <code>ScatterTimingXSample</code>
  * 

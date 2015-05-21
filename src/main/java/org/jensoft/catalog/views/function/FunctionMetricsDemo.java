@@ -25,6 +25,7 @@ import org.jensoft.core.plugin.function.MetricsPathFunction;
 import org.jensoft.core.plugin.function.source.UserSourceFunction;
 import org.jensoft.core.plugin.function.source.UserSourceFunction.SplineSource;
 import org.jensoft.core.plugin.grid.Grid.GridOrientation;
+import org.jensoft.core.plugin.grid.GridPlugin;
 import org.jensoft.core.plugin.grid.GridPlugin.MultiplierGrid;
 import org.jensoft.core.plugin.legend.title.TitleLegend;
 import org.jensoft.core.plugin.legend.title.TitleLegendConstraints;
@@ -34,6 +35,7 @@ import org.jensoft.core.plugin.legend.title.TitleLegendPlugin;
 import org.jensoft.core.plugin.metrics.AxisMetricsPlugin;
 import org.jensoft.core.plugin.outline.OutlinePlugin;
 import org.jensoft.core.plugin.pathmetrics.MetricsPathPlugin;
+import org.jensoft.core.plugin.stripe.StripePlugin;
 import org.jensoft.core.plugin.stripe.StripePlugin.MultiplierStripe;
 import org.jensoft.core.plugin.stripe.painter.StripePalette;
 import org.jensoft.core.plugin.translate.TranslatePlugin;
@@ -43,8 +45,6 @@ import org.jensoft.core.plugin.zoom.wheel.ZoomWheelPlugin;
 import org.jensoft.core.projection.Projection;
 import org.jensoft.core.view.View;
 import org.jensoft.core.view.background.ViewDarkBackground;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
 @JenSoftView(background=ViewDarkBackground.class,description="Show hhow to use core metrics path function")
 public class FunctionMetricsDemo extends View {
 

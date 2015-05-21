@@ -11,6 +11,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 import org.jensoft.core.catalog.nature.JenSoftView;
+import org.jensoft.core.catalog.ui.ViewFrameUI;
 import org.jensoft.core.graphics.Shader;
 import org.jensoft.core.palette.color.ColorPalette;
 import org.jensoft.core.palette.color.FilPalette;
@@ -20,12 +21,12 @@ import org.jensoft.core.palette.color.PetalPalette;
 import org.jensoft.core.palette.color.RosePalette;
 import org.jensoft.core.plugin.function.FunctionPlugin;
 import org.jensoft.core.plugin.function.FunctionPlugin.AreaFunction;
-import org.jensoft.core.plugin.function.FunctionPlugin;
 import org.jensoft.core.plugin.function.area.Area;
 import org.jensoft.core.plugin.function.area.painter.draw.AreaDefaultDraw;
 import org.jensoft.core.plugin.function.area.painter.fill.AreaGradientFill;
 import org.jensoft.core.plugin.function.source.UserSourceFunction;
 import org.jensoft.core.plugin.grid.Grid.GridOrientation;
+import org.jensoft.core.plugin.grid.GridPlugin;
 import org.jensoft.core.plugin.grid.GridPlugin.MultiplierGrid;
 import org.jensoft.core.plugin.legend.title.TitleLegend;
 import org.jensoft.core.plugin.legend.title.TitleLegendConstraints;
@@ -35,6 +36,7 @@ import org.jensoft.core.plugin.legend.title.TitleLegendPlugin;
 import org.jensoft.core.plugin.legend.title.painter.fil.TitleLegendGradientFill;
 import org.jensoft.core.plugin.metrics.AxisMetricsPlugin;
 import org.jensoft.core.plugin.outline.OutlinePlugin;
+import org.jensoft.core.plugin.stripe.StripePlugin;
 import org.jensoft.core.plugin.stripe.StripePlugin.MultiplierStripe;
 import org.jensoft.core.plugin.stripe.painter.StripePalette;
 import org.jensoft.core.plugin.translate.TranslateDefaultDeviceContext;
@@ -51,9 +53,6 @@ import org.jensoft.core.view.Portfolio;
 import org.jensoft.core.view.View;
 import org.jensoft.core.view.background.ViewDarkBackground;
 import org.jensoft.core.view.background.ViewDefaultBackground;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
-import org.jensoft.core.plugin.function.area.Area;
 
 /**
  * <code>AreaMultipleLineXFunction</code>
@@ -65,6 +64,10 @@ public class AreaMultipleLineXFunction extends View {
 
 	private static final long serialVersionUID = 1398628382389532168L;
 
+	
+	public static void main(String[] args) {
+		ViewFrameUI ui = new ViewFrameUI(new AreaMultipleLineXFunction());
+	}
 	/**
 	 * Create demo with multiple line area source functions
 	 */

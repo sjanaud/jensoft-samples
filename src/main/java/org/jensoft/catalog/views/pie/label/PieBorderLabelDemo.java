@@ -22,8 +22,8 @@ import org.jensoft.core.plugin.pie.PieSlice;
 import org.jensoft.core.plugin.pie.PieToolkit;
 import org.jensoft.core.plugin.pie.painter.effect.PieLinearEffect;
 import org.jensoft.core.plugin.pie.painter.label.AbstractPieSliceLabel.Style;
-import org.jensoft.core.plugin.pie.painter.label.PieBorderLabel.LinkStyle;
 import org.jensoft.core.plugin.pie.painter.label.PieBorderLabel;
+import org.jensoft.core.plugin.pie.painter.label.PieBorderLabel.LinkStyle;
 import org.jensoft.core.projection.Projection;
 import org.jensoft.core.view.View;
 

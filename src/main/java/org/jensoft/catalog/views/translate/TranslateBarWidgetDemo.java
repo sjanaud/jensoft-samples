@@ -27,7 +27,6 @@ import org.jensoft.core.plugin.legend.title.painter.fil.TitleLegendGradientFill;
 import org.jensoft.core.plugin.metrics.AxisMetricsPlugin;
 import org.jensoft.core.plugin.outline.OutlinePlugin;
 import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
 import org.jensoft.core.plugin.stripe.StripePlugin.MultiplierStripe;
 import org.jensoft.core.plugin.stripe.painter.StripePalette;
 import org.jensoft.core.plugin.translate.TranslatePlugin;

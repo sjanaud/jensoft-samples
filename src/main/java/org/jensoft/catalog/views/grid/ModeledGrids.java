@@ -17,6 +17,7 @@ import org.jensoft.core.palette.StrokePalette;
 import org.jensoft.core.palette.color.RosePalette;
 import org.jensoft.core.palette.color.TangoPalette;
 import org.jensoft.core.plugin.grid.Grid.GridOrientation;
+import org.jensoft.core.plugin.grid.GridPlugin;
 import org.jensoft.core.plugin.grid.GridPlugin.ModeledGrid;
 import org.jensoft.core.plugin.grid.manager.ModeledGridManager.GridModelRangeCollections;
 import org.jensoft.core.plugin.legend.title.TitleLegend;
@@ -33,8 +34,6 @@ import org.jensoft.core.view.Portfolio;
 import org.jensoft.core.view.View;
 import org.jensoft.core.view.background.ViewDarkBackground;
 import org.jensoft.core.view.background.ViewDefaultBackground;
-import org.jensoft.core.plugin.stripe.StripePlugin;
-import org.jensoft.core.plugin.grid.GridPlugin;
 /**
  * <code>FlowGridDemo</code>
  * 
