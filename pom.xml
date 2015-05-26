@@ -75,35 +75,7 @@
 
 	<build>
 
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>**/pom.*</include>
-				</includes>
-				<filtering>true</filtering>
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<excludes>
-					<exclude>**/pom.*</exclude>
-				</excludes>
-				<filtering>false</filtering>
-			</resource>
-		</resources>
-
 		<plugins>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>${version.plugin.maven-jar-plugin}</version>
-				<configuration>
-					<archive>
-						<addMavenDescriptor>false</addMavenDescriptor>
-					</archive>
-				</configuration>
-			</plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -169,7 +141,7 @@
 
   <!-- Deploy snapshots to the Sonatype OSSRH (OSS Repository Hosting) -->
   <distributionManagement>
-    <downloadUrl>https://github.com/sjanaud/jensoft-core</downloadUrl>
+    <downloadUrl>https://github.com/sjanaud/jensoft-samples</downloadUrl>
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
